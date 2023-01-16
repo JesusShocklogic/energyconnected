@@ -1,0 +1,496 @@
+@charset "UTF-8";
+/*
+Theme Name: THE Student Festival 1.1
+Theme URI: https://thestudentfestivals.com/
+Author: The Shocklogic team
+Author URI: https://shocklogic.com/
+Description: 
+Requires at least: 5.3
+Tested up to: 5.7
+Requires PHP: 7.3.0
+Version: 1.1
+License:
+License URI:
+Text Domain: shocklogic.com
+Tags:
+*/
+
+/* FONTS */
+
+@font-face {
+    font-family: Noto-regular;
+    src: url(fonts/NotoSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: Noto-bold;
+    src: url(fonts/NotoSans-Bold.ttf);
+}
+
+* {
+    font-family: Noto-regular;
+}
+
+.notoBold {
+    font-family: Noto-Bold;
+}
+
+.notoSemibold {
+    font-weight: 600;
+}
+
+body {
+    font-family: 'Noto Sans';
+}
+
+body>* {
+    word-break: break-word;
+}
+
+/* Backgrounds */
+
+.bg-green {
+    background-color: #E84C22 !important;
+    color: #ffffff !important;
+}
+.menu-shadow {
+        background-color: #004259 !important;
+}
+/* Texts */
+
+.text-black {
+    color: #000000 !important;
+	
+}
+
+/*Menu*/
+.dropdown-item.active, .dropdown-item:active {
+	background-color: #e84c22!important;
+}
+
+/* Header */
+
+.main-header {
+    background-size: cover;
+    background-position: bottom right;
+    min-height: 500px;
+}
+
+.border-none {
+    border: none !important;
+}
+
+.box-shadow-none {
+    box-shadow: none !important;
+}
+
+/*Speaker*/
+
+.speacker-avatar {
+    border-radius: 50%;
+    border: thin solid black;
+}
+
+/*Speaker Modal*/
+
+.modal-content-speaker {
+    border-radius: 25px!important;
+}
+
+.modal-image {
+    min-width: 15vw;
+    max-width: 35vw;
+}
+
+/*View More Button*/
+
+.view-more-btn, .view-more-btn:hover {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/*Single University Titles*/
+
+.single-page-title {
+    color: #000000;
+    font-family: "Noto sans";
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/*Country Main Hub*/
+
+.country-hub-video {
+    padding: 56.25% 0 0 0;
+    position: relative;
+}
+
+.country-hub-video iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*Partner with us*/
+
+.partner-banner {
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 625px;
+}
+
+/*Header Nav*/
+
+.bg-custom {
+    background-image: linear-gradient(#9c9c9c, #ffffff00);
+}
+
+.logo-size {
+    max-width: 300px !important;
+}
+
+/*Footer*/
+
+.bgcolor-black {
+    background-color: #000000 !important;
+}
+
+.mail-icon-size {
+    width: 80px;
+}
+
+.bgcolor-green {
+    background-color: #00fa0c;
+}
+
+.text-align-footer {
+    text-align: center;
+}
+
+.sidebar-ad-img-size {
+    height: 260px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.ad-img-size {
+    height: 300px;
+    width: 100%;
+    object-fit: contain;
+    object-position: center center;
+}
+
+.card-img-size {
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.card-img {
+    height: 145px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.article-title {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.latest-articles-title {
+    font-size: 20px;
+}
+
+.text-small {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.article-top-image {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+/* Header style */
+
+.social-icons {
+    height: 34px;
+}
+
+.navbar {
+    z-index: 5;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: black !important;
+    padding: .5rem 1rem;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    font-weight: bolder !important;
+}
+
+.menu-shadow {
+    position: absolute;
+    height: 70px;
+    background-color: #000;
+    /* opacity: 0.5; */
+    width: 100%;
+    z-index: 1;
+}
+
+.white {
+    color: #ffffff;
+}
+
+/*Floating media icons menu*/
+
+.floating-icons-container{
+	background-color: rgba(0,0,0,0.6);
+	border-radius: 25px;
+	width: auto;
+	padding: 10px;
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	right: 0;
+
+	transition: transform 400ms;
+	transform: translateY(-100vh);
+}
+
+.floating-icons-container.shown {
+	transform: translateY(0);
+	transition: transform 400ms;
+}
+
+/* Collapse data */
+.collapse-toggle {
+	text-decoration: none;
+}
+
+.collapse-toggle::before {
+	content: '\23F5';
+}
+
+.collapse-toggle[aria-expanded="true"]::before {
+	content: '\23F7';
+}
+
+/* ---------------------- */
+
+.text-footer {
+    text-align: center;
+}
+
+.offcanvas-size {
+    width: 300px;
+}
+
+.art-icons-size {
+    height: 15px;
+    color: #8b8b8b;
+}
+
+.carousel-height {
+    height: 100px;
+    object-fit: contain;
+}
+
+.long-ad-height {
+    height: 80px;
+    object-fit: contain;
+}
+
+.mostRead-img-size {
+    height: 30px;
+    width: 100%;
+}
+
+.stats-font {
+    font-size: 50px;
+    line-height: 40px;
+}
+
+.img-card {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.date-img-size {
+    height: 350px;
+    width: 100%;
+    object-fit: contain;
+    object-position: center center;
+}
+
+.side-padding {
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.menu-option-hover:hover {
+    background-color: #00fa0c !important;
+    color: #00fa0c !important;
+}
+
+ul.navbar-nav li {
+    border-bottom: 1px solid #21252940;
+}
+
+@media (min-width: 576px) {}
+
+@media (min-width: 768px) {
+    .carousel-height {
+        height: 170px;
+    }
+}
+
+@media (min-width: 992px) {
+    .carousel-height {
+        height: 300px;
+    }
+    .text-align-footer {
+        text-align: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .dropdown-item:focus, .dropdown-item:hover {
+        border-radius: .25rem;
+    }
+    a.nav-link {
+        font-size: 16px;
+    }
+    .navbar-dark .navbar-nav .nav-link {
+        color: white !important;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    ul.navbar-nav li {
+        border-bottom: none;
+    }
+    .menu-shadow {
+        position: absolute;
+        height: 130px;
+        /*background-color: #004259;*/
+        /*opacity: 0.5;*/
+        width: 100%;
+        z-index: 1;
+    }
+    .mostRead-img-size {
+        height: 35px;
+        width: 100%;
+    }
+    .topAd-img-size {
+        height: 180px;
+        width: 100%;
+        object-fit: contain;
+        object-position: center center;
+    }
+    .sub-text {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .sidebar-ad-img-size {
+        height: 350px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+    .card-img-size {
+        height: 275px;
+    }
+    .side-padding {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+    .menu-bgcolor {
+        background-image: linear-gradient(#acacac, #FFFFFF);
+    }
+    .text-footer {
+        text-align: left;
+    }
+    .art-icons-size {
+        height: 16px;
+        color: #8b8b8b;
+    }
+    .carousel-height {
+        height: 100px;
+    }
+    .long-ad-height {
+        min-height: 100px;
+        height: auto;
+        max-height: 150px;
+    }
+    .tiktok-ad-img-size {
+        height: 760px;
+        width: 100%;
+        object-fit: contain;
+        object-position: center center;
+    }
+    .article-top-image {
+        height: 400px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+    .card-img {
+        height: 110px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+    .ad-img-size {
+        height: 350px;
+        width: 100%;
+        object-fit: contain;
+        object-position: center center;
+    }
+    .text-align-footer {
+        text-align: left;
+    }
+    .stats-font {
+        font-size: 60px;
+        line-height: 50px;
+    }
+    .date-img-size {
+        width: 100%;
+        object-fit: contain;
+        object-position: center center;
+    }
+}
+
+@media (min-width: 1400px) {
+    a.nav-link {
+        font-size: 18px;
+    }
+    .menu-bgcolor {
+        background-image: linear-gradient(#acacac, #FFFFFF);
+    }
+    .text-footer {
+        text-align: left;
+    }
+    .date-img-size {
+        height: 400px;
+    }
+}
