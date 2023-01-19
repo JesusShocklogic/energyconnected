@@ -76,31 +76,7 @@ get_header('front'); ?>
 </div>
 
 <!-- CARRUSEL SPEAKERS -->
-<?php speakers_carousel(); ?>
-
-<!-- FEATURED UNIVERSITIES -->
-<?php
-/*
-<div class="side-padding d-none">
-    <div class="container-fluid mt-5">
-        <div class="row justify-content-center">
-            <div class="col-12">
-                <h3 class="notoBold">Featured Universities</h3>
-            </div>
-        </div>
-        <!-- UNIVERSITY 1 -->
-        <div class="row gx-lg-5 mt-3 justify-content-center">
-            <?php universities_features(); ?>
-            <!-- SIDEBAR AD -->
-            <div class="col-12 col-lg-4 my-4 my-lg-0">
-                <a href="<?php echo get_field("ad_image_1_url")["url"]; ?>">
-                    <img class="img-responsive date-img-size" src="<?php echo get_field("ad_image_1")["url"]; ?>">
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-*/ ?>
+<?php speakers_carousel(get_field('speakers_carousel')); ?>
 
 <!-- CARRUSEL PARTNERS -->
 <?php partners_carousel(); ?>
