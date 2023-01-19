@@ -6,7 +6,7 @@ function speaker_carousel_wiper_start()
     $result .= <<<RESULT
         <script>
             const swiperSpeaker = new Swiper('.speaker-swiper-container', {
-                loop: true,
+                loop: false,
                 autoplay: {
                 delay: 2500,
                 disableOnInteraction: false,
@@ -31,7 +31,7 @@ function speaker_carousel_wiper_start()
     echo $result;
 }
 
-function speakers_carousel()
+function speakers_carousel($speakersSettings)
 {
     $result = "";
     $result .= <<<RESULT
@@ -69,7 +69,16 @@ function speakers_carousel()
                         <div class="swiper-wrapper">
     RESULT;
 
-    $speakersArray = synclogic_get_all_speakers();
+    if ($speakersSettings['select'] == 'all') {
+        $speakersArray = synclogic_get_all_speakers();
+    } elseif ($speakersSettings['select'] == 'categories') {
+        $categories = "";
+        $categories = array_map(function ($category) {
+            return $category['category'];
+        }, $speakersSettings['categories']);
+        $categories = implode(",", $categories);
+        $speakersArray = synclogic_get_all_speakers_by_categories($categories);
+    }
 
     foreach ($speakersArray as $key => $speaker) {
         if ($key == 10) break;
@@ -133,12 +142,12 @@ function speakers_carousel()
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body modal_dialog_content_body">
-						<div class="ratio ratio-1x1" style="width: 75%;margin: 0 auto;margin-bottom: 1rem;">
-							<div>
-								<img src="<?= $image ?>" alt="" class="mx-auto rounded-circle" style="object-fit: cover;width: 100%;height: 100%;">
-							</div>
-						</div>
-						<div class="text-center">
+                        <div class="ratio ratio-1x1" style="width: 75%;margin: 0 auto;margin-bottom: 1rem;">
+                            <div>
+                                <img src="<?= $image ?>" alt="" class="mx-auto rounded-circle" style="object-fit: cover;width: 100%;height: 100%;">
+                            </div>
+                        </div>
+                        <div class="text-center">
                             <strong><?= ($name ?? '') ?></strong>
                             <div><?= ($jobTitle ?? '') ?></div>
                             <div><?= ($organization ?? '') ?></div>
