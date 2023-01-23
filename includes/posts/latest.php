@@ -41,7 +41,7 @@ function posts_latest($amount = 3)
             }
 
             $result .= <<<RESULT
-                <div class="col-12 col-md-4 pe-xl-3 pb-4 mb-4">
+                <div class="col-12 col-md-6 col-xl-3 pe-xl-3 pb-4 mb-4">
                     <a class="d-flex text-black text-decoration-none" href="$permalink">
                         <div class="card card-height w-100 border-0">
                             $image_string

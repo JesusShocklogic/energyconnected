@@ -125,7 +125,7 @@ if (have_posts()) {
 					<!-- MOST READ ARTICLES -->
 					<div class="row justify-content-center mt-5">
 						<div class="col-11 col-xl-12">
-							<img src="<?= get_field('theme_settings', 'options')["most_read_image"]["url"]; ?>" class="mostRead-img-size" alt="">
+							<h2 class="mb-0">Most Read</h2>
 						</div>
 					</div>
 					<!-- ARTICLES -->
