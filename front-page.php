@@ -177,23 +177,37 @@ ITEMS;
 		box-shadow: 5px 5px 8px #00000029;
 		padding: 2rem;
 	}
+
+	.testimonials-grid {
+		display: grid;
+		grid-gap: 1.5rem;
+		grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+
+	}
+
+	@media (min-width: 576px) {}
+
+	@media (min-width: 768px) {}
+
+	@media (min-width: 992px) {}
+
+	@media (min-width: 1200px) {}
+
+	@media (min-width: 1400px) {}
 </style>
 <?php
 $testimonials_repeater = get_field('testimonials_repeater');
 if ($testimonials_repeater) { ?>
-	<div class="side-padding my-5">
-		<div class="container-fluid mt-5">
-			<div class="row justify-content-center">
-				<?php
-				foreach ($testimonials_repeater as $key => $testimonial) { ?>
-					<div class="col-12 col-md-6 col-xl-3">
-						<div class="testimonial">
-							<?= $testimonial['testimonial'] ?></div>
-					</div>
-				<?php
-				}
-				?>
-			</div>
+	<div class="side-padding">
+		<div class="mt-5 testimonials-grid">
+			<?php
+			foreach ($testimonials_repeater as $key => $testimonial) { ?>
+				<div class="testimonial">
+					<?= $testimonial['testimonial'] ?>
+				</div>
+			<?php
+			}
+			?>
 		</div>
 	</div>
 <?php
