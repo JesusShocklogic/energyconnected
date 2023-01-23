@@ -86,7 +86,7 @@ function speakers_carousel($speakersSettings)
         $jobTitle = $speaker->job_title;
         $organization = $speaker->company;
         $image = $speaker->image_profile;
-        $speakerModalId = "speaker" . $key;
+        $speakerModalId = "speaker" . $speaker->speaker_id;
 
         $result .= <<<RESULT
                 <div class="swiper-slide align-self-start">
@@ -124,13 +124,14 @@ function speakers_carousel($speakersSettings)
     * Speakers modals
     */
 
-    $speakersModals = synclogic_get_all_speakers();
+
+    $speakersModals = $speakersArray;
     foreach ($speakersModals as $key => $speaker) {
         $name = $speaker->speaker_name . " " . $speaker->speaker_family_name;
         $jobTitle = $speaker->job_title;
         $organization = $speaker->company;
         $image = $speaker->image_profile;
-        $speakerModalId = "speaker" . $key;
+        $speakerModalId = "speaker" . $speaker->speaker_id;
         $biography = $speaker->biography;
 ?>
         <!-- Modal -->
