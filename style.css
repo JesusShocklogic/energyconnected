@@ -16,7 +16,7 @@ Tags:
 */
 
 /* FONTS */
-
+/*
 @font-face {
     font-family: Noto-regular;
     src: url(fonts/NotoSans-Regular.ttf);
@@ -46,6 +46,7 @@ body {
 body>* {
     word-break: break-word;
 }
+*/
 
 /* Backgrounds */
 
