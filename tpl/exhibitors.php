@@ -50,7 +50,7 @@ if ($wp_query->have_posts()) {
 								<div class="modal-image ratio ratio-1x1 m-auto">
 									<img src="$image" style="object-fit: scale-down;" />
 								</div>
-PARTNER;
+		PARTNER;
         if ($link) :
             $link_url = $link['url'];
             $link_title = $link["title"];
@@ -60,7 +60,7 @@ PARTNER;
 								<a href=$link_url class="btn rounded-pill bg-green my-3 p-1" target=" $link_target">
 									$link_title
 								</a>
-PARTNER;
+							PARTNER;
         endif;
         $partners .= <<<PARTNER
 							</div>
@@ -86,12 +86,12 @@ PARTNER;
         $carouselArray = $data['adds_carousel'];
 
         $carousel .= <<<ITEMS
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-12">
-					<div id="addsCarousel" class="carousel slide" data-bs-ride="carousel">
-						<div class="carousel-inner">
-ITEMS;
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-12">
+						<div id="addsCarousel" class="carousel slide" data-bs-ride="carousel">
+							<div class="carousel-inner">
+			ITEMS;
         foreach ($carouselArray as $key => $carouselItem) {
             $image = $carouselItem['image']['url'];
             $active = ($key == 0) ? 'active' : '';
@@ -99,7 +99,7 @@ ITEMS;
 							<div class="carousel-item $active">
 								<img src="$image" class="d-block w-100" alt="...">
 							</div>
-ITEMS;
+							ITEMS;
         }
         $carousel .= <<<ITEMS
 							<button class="carousel-control-prev" type="button" data-bs-target="#addsCarousel" data-bs-slide="prev">

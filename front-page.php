@@ -104,7 +104,7 @@ get_header('front'); ?>
 								<div class="col-12">
 									<div id="addsCarousel" class="carousel slide" data-bs-ride="carousel">
 										<div class="carousel-inner">
-ITEMS;
+							ITEMS;
 
 					foreach ($carouselArray as $key => $carouselItem) {
 						$image = $carouselItem['image']['url'];
@@ -122,13 +122,13 @@ ITEMS;
 										<img src="$image" class="d-block w-100" alt="...">
 									</a>
 								</div>
-ITEMS;
+								ITEMS;
 						} else {
 							$carousel .= <<<ITEMS
 								<div class="carousel-item $active">
 									<img src="$image" class="d-block w-100" alt="...">
 								</div>
-ITEMS;
+								ITEMS;
 						}
 					}
 					$carousel .= <<<ITEMS
@@ -144,7 +144,7 @@ ITEMS;
 									</div>
 								</div>
 							</div>
-ITEMS;
+							ITEMS;
 				} //Building carousel
 				echo $carousel;
 				//calling the latest articles
