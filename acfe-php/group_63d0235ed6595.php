@@ -97,12 +97,9 @@ acf_add_local_field_group(array(
 						'class' => '',
 						'id' => '',
 					),
-					'post_type' => array(
-						0 => 'partners',
-					),
+					'post_type' => '',
 					'field_type' => 'checkbox',
 					'default_value' => array(
-						0 => 'partners',
 					),
 					'return_format' => 'name',
 					'layout' => 'horizontal',
@@ -341,7 +338,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'shocklogic' => 'Shocklogic',
 	),
-	'modified' => 1674590411,
+	'modified' => 1674590973,
 ));
 
 endif;

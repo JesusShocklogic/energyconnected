@@ -93,13 +93,9 @@
                         "class": "",
                         "id": ""
                     },
-                    "post_type": [
-                        "partners"
-                    ],
+                    "post_type": "",
                     "field_type": "checkbox",
-                    "default_value": [
-                        "partners"
-                    ],
+                    "default_value": [],
                     "return_format": "name",
                     "layout": "horizontal",
                     "toggle": 0,
@@ -331,7 +327,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1674590411,
+    "modified": 1674590973,
     "acfe_categories": {
         "shocklogic": "Shocklogic"
     }
