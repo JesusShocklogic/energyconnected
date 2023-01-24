@@ -97,6 +97,26 @@
                     "acfe_thumbnail": 0
                 },
                 {
+                    "key": "field_63d0035019e79",
+                    "label": "Latest post label",
+                    "name": "latest_post_label",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Latest articles",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
                     "key": "field_60f58646daf39",
                     "label": "Google Analitycs",
                     "name": "google_analitycs_select",
@@ -313,5 +333,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1674494948
+    "modified": 1674577155
 }

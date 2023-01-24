@@ -79,7 +79,7 @@ get_header('front'); ?>
 <?php speakers_carousel(get_field('speakers_carousel')); ?>
 
 <!-- CARRUSEL PARTNERS -->
-<?php partners_carousel(); ?>
+<?php partners_carousel(get_field('partners_carousel')); ?>
 
 <!-- Exhibitors Carousel -->
 <?php //exhibitors_carousel(); 

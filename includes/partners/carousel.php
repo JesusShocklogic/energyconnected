@@ -34,8 +34,9 @@ function partner_carousel_wiper_start()
 	echo $result;
 }
 
-function partners_carousel()
+function partners_carousel($partners_carousel)
 {
+    $top_content = $partners_carousel['top_content'] ?? "";
 	$result = "";
 	$result .= <<<RESULT
     <style>
@@ -64,7 +65,7 @@ function partners_carousel()
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 h3 text-black notoBold">
-                    Partners
+                    $top_content
                 </div>
                 <div class="col-12">
                     <!-- Slider main container -->
