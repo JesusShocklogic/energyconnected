@@ -14,10 +14,11 @@ function posts_latest($amount = 3)
     $wp_query = new WP_Query($args);
 
     if ($wp_query->have_posts()) {
+        $latest_post_label = get_field('theme_settings', 'option')['latest_post_label'] ?? "";
         $result = <<<RESULT
             <div class="row pb-1">
                 <div class="col-12">
-                    <h3 class="notoBold pb-3">Latest articles</h3>
+                    $latest_post_label
                 </div>
         RESULT;
 
@@ -36,7 +37,7 @@ function posts_latest($amount = 3)
                     <img src="$image" class="card-img-size" alt="">
                 </div>
                 ITEM;
-            }else{
+            } else {
                 $image_string = "";
             }
 

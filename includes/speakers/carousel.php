@@ -33,6 +33,7 @@ function speaker_carousel_wiper_start()
 
 function speakers_carousel($speakersSettings)
 {
+    $top_content = $speakersSettings['top_content'];
     $result = "";
     $result .= <<<RESULT
     <style>
@@ -60,7 +61,7 @@ function speakers_carousel($speakersSettings)
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 h3 text-black notoBold">
-                    Speakers
+                    $top_content
                 </div>
                 <div class="col-12">
                     <!-- Slider main container -->
