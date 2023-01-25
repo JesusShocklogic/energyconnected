@@ -1,7 +1,4 @@
 <?php
-/*
-* Template name: 404 default
-*/
 get_header();
 
 if (have_posts()) {

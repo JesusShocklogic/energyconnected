@@ -6,6 +6,7 @@
             "key": "field_60f087aeb5ca0",
             "label": "Data",
             "name": "data",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -16,13 +17,15 @@
                 "id": ""
             },
             "layout": "block",
+            "acfe_seamless_style": 1,
             "sub_fields": [
                 {
                     "key": "field_60f087bcb5ca1",
-                    "label": "Iframe",
+                    "label": "Iframe url",
                     "name": "iframe",
+                    "aria-label": "",
                     "type": "url",
-                    "instructions": "",
+                    "instructions": "Place only the URL that goes within the iframe",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -33,7 +36,11 @@
                     "default_value": "",
                     "placeholder": ""
                 }
-            ]
+            ],
+            "acfe_group_modal": 0,
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large"
         }
     ],
     "location": [
@@ -53,5 +60,13 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1626376453
+    "show_in_rest": 0,
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1674666914
 }

@@ -5,46 +5,49 @@
 get_header(); ?>
 <!--Speaker's Grid-->
 <style>
-.speacker-avatar {
-    box-shadow: 3px 3px 10px #00000026;
-    border: 3px solid #E84C22;
-}
-.f-096{
-    font-size: 0.96rem;
-}
-    </style>
+	.speacker-avatar {
+		box-shadow: 3px 3px 10px #00000026;
+		border: 3px solid #E84C22;
+	}
+
+	.f-096 {
+		font-size: 0.96rem;
+	}
+</style>
 </style>
 <div class="container">
-    <style>
-        #searchbar, #searchbar:focus {
+	<div class="row justify-content-center pb-4">
+		<div class="col-12">
+			<?php the_content() ?>
+		</div>
+	</div>
+	<style>
+		#searchbar,
+		#searchbar:focus {
 			border: 1px solid #ededed;
-			border-top-left-radius: .50rem!important;
-			border-bottom-left-radius: .50rem!important;
+			border-top-left-radius: .50rem !important;
+			border-bottom-left-radius: .50rem !important;
 			background-color: #ededed;
 			box-shadow: none;
 		}
+
 		.search-icon {
-			border-top-right-radius: .50rem!important;
-			border-bottom-right-radius: .50rem!important;
-			border: 1px solid #e84c22!important;
-			background-color: #e84c22!important;
+			border-top-right-radius: .50rem !important;
+			border-bottom-right-radius: .50rem !important;
+			border: 1px solid #e84c22 !important;
+			background-color: #e84c22 !important;
 			color: white;
 		}
-    </style>
+	</style>
 	<div class="row justify-content-center pb-4">
 		<div class="col-12 col-lg-4">
 			<div class="input-group mb-3">
-				<input 
-					id="searchbar"
-					type="text" 
-					class="form-control py-2" 
-					placeholder="Search" 
-				>
+				<input id="searchbar" type="text" class="form-control py-2" placeholder="Search">
 				<span class="input-group-text search-icon py-2"><i class="fas fa-search"></i></span>
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="row pt-3 pb-5">
 
 		<?php
@@ -112,7 +115,7 @@ get_header(); ?>
 get_footer();
 ?>
 <script>
-    //Search bar
+	//Search bar
 	$('#searchbar').on('keyup', function() {
 		let searchval = this.value.toUpperCase();
 
