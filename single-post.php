@@ -1,7 +1,4 @@
 <?php
-/*
-* Template name: Single post
-*/
 get_header();
 $single_post_settings = get_field('single_post_settings', 'option');
 

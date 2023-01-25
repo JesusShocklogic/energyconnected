@@ -1,7 +1,4 @@
 <?php
-/*
-* Template name: Front page
-*/
 get_header('front'); ?>
 
 <!-- Text section -->
