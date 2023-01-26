@@ -11,6 +11,11 @@ get_header('front'); ?>
 </div>
 
 <!-- STATS -->
+<style>
+	.stats-font {
+		color: #004259;
+	}
+</style>
 <div class="side-padding">
 	<div class="container-fluid">
 		<div class="row justify-content-around align-items-center">
@@ -78,7 +83,8 @@ get_header('front'); ?>
 <!-- CARRUSEL PARTNERS -->
 <?php partners_carousel(get_field('partners_carousel')); ?>
 
-<?php //the_content() ?>
+<?php //the_content() 
+?>
 
 <!-- Exhibitors Carousel -->
 <?php //exhibitors_carousel(); 

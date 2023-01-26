@@ -2,6 +2,13 @@
 
 function posts_latest($amount = 3)
 {
+?>
+    <style>
+        .card-title {
+            color: #004259;
+        }
+    </style>
+<?php
     $result = "";
     $args = array(
         'post_type'         => 'post', //it does accept Custom Types

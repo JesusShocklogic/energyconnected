@@ -38,7 +38,7 @@ function speakers_carousel($speakersSettings)
     $result .= <<<RESULT
     <style>
         .swiper-button-next, .swiper-button-prev {
-            color: var(--swiper-navigation-color,#000);
+            color: #004259;
         }
         .swiper-slide {
             text-align: center;
