@@ -8,42 +8,44 @@ Description:
 Requires at least: 5.3
 Tested up to: 5.7
 Requires PHP: 7.3.0
-Version: 1.1
+Version: 2
 License:
 License URI:
 Text Domain: shocklogic.com
 Tags:
 */
 
-
 /*
 Wordpress Core CSS
  */
-img.alignright, .alignright img {
-	float:right;
-	margin:0 0 1em 1em;
+img.alignright,
+.alignright img {
+    float: right;
+    margin: 0 0 1em 1em;
 }
-img.alignleft, .alignleft img {
-	float:left;
-	margin:0 1em 1em 0;
+img.alignleft,
+.alignleft img {
+    float: left;
+    margin: 0 1em 1em 0;
 }
-img.aligncenter, .aligncenter img {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+img.aligncenter,
+.aligncenter img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 a img.alignright {
-	float:right;
-	margin:0 0 1em 1em;
+    float: right;
+    margin: 0 0 1em 1em;
 }
 a img.alignleft {
-	float:left;
-	margin:0 1em 1em 0;
+    float: left;
+    margin: 0 1em 1em 0;
 }
 a img.aligncenter {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* FONTS */
@@ -82,22 +84,22 @@ body>* {
 /* Backgrounds */
 
 .bg-green {
-    background-color: #E84C22 !important;
+    background-color: #e84c22 !important;
     color: #ffffff !important;
 }
 .menu-shadow {
-        background-color: #004259 !important;
+    background-color: #004259 !important;
 }
 /* Texts */
 
 .text-black {
     color: #000000 !important;
-	
 }
 
 /*Menu*/
-.dropdown-item.active, .dropdown-item:active {
-	background-color: #e84c22!important;
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: #e84c22 !important;
 }
 
 /* Header */
@@ -126,7 +128,7 @@ body>* {
 /*Speaker Modal*/
 
 .modal-content-speaker {
-    border-radius: 25px!important;
+    border-radius: 25px !important;
 }
 
 .modal-image {
@@ -136,7 +138,8 @@ body>* {
 
 /*View More Button*/
 
-.view-more-btn, .view-more-btn:hover {
+.view-more-btn,
+.view-more-btn:hover {
     text-decoration: none;
     background-color: black;
     color: white;
@@ -272,7 +275,7 @@ body>* {
 
 .navbar-dark .navbar-nav .nav-link {
     color: black !important;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover {
@@ -294,36 +297,36 @@ body>* {
 
 /*Floating media icons menu*/
 
-.floating-icons-container{
-	background-color: rgba(0,0,0,0.6);
-	border-radius: 25px;
-	width: auto;
-	padding: 10px;
-	position: fixed;
-	z-index: 10;
-	top: 0;
-	right: 0;
+.floating-icons-container {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 25px;
+    width: auto;
+    padding: 10px;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
 
-	transition: transform 400ms;
-	transform: translateY(-100vh);
+    transition: transform 400ms;
+    transform: translateY(-100vh);
 }
 
 .floating-icons-container.shown {
-	transform: translateY(0);
-	transition: transform 400ms;
+    transform: translateY(0);
+    transition: transform 400ms;
 }
 
 /* Collapse data */
 .collapse-toggle {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 .collapse-toggle::before {
-	content: '\23F5';
+    content: "\23F5";
 }
 
 .collapse-toggle[aria-expanded="true"]::before {
-	content: '\23F7';
+    content: "\23F7";
 }
 
 /* ---------------------- */
@@ -389,7 +392,8 @@ ul.navbar-nav li {
     border-bottom: 1px solid #21252940;
 }
 
-@media (min-width: 576px) {}
+@media (min-width: 576px) {
+}
 
 @media (min-width: 768px) {
     .carousel-height {
@@ -407,8 +411,12 @@ ul.navbar-nav li {
 }
 
 @media (min-width: 1200px) {
-    .dropdown-item:focus, .dropdown-item:hover {
-        border-radius: .25rem;
+    .extra-paddings {
+        padding: 0 7vw;
+    }
+    .dropdown-item:focus,
+    .dropdown-item:hover {
+        border-radius: 0.25rem;
     }
     a.nav-link {
         font-size: 16px;
@@ -457,7 +465,7 @@ ul.navbar-nav li {
         padding-right: 5vw;
     }
     .menu-bgcolor {
-        background-image: linear-gradient(#acacac, #FFFFFF);
+        background-image: linear-gradient(#acacac, #ffffff);
     }
     .text-footer {
         text-align: left;
@@ -517,7 +525,7 @@ ul.navbar-nav li {
         font-size: 18px;
     }
     .menu-bgcolor {
-        background-image: linear-gradient(#acacac, #FFFFFF);
+        background-image: linear-gradient(#acacac, #ffffff);
     }
     .text-footer {
         text-align: left;
