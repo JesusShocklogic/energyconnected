@@ -30,7 +30,7 @@ if ($wp_query->have_posts()) {
 		$link = get_field("link");
 		$partners .= <<<PARTNER
 		<div class="col-6 col-md-4 col-lg-3">
-			<div class="ratio ratio-1x1 p-4" type="button" id="submit" data-bs-toggle="modal" data-bs-target="#partnerModal-$id" data-id="$id">
+			<div class="ratio ratio-4x3 p-4" type="button" id="submit" data-bs-toggle="modal" data-bs-target="#partnerModal-$id" data-id="$id">
 				<div class="d-flex p-4">
 					<img src="$image" class="img-fluid align-self-center" />
 				</div>
@@ -128,7 +128,7 @@ if ($wp_query->have_posts()) {
 	</style>
 	<!--SPONSOR GRID-->
 	<div class="container">
-		<div class="row g-5">
+		<div class="row">
 			<?= $the_content ?>
 			<?php echo $partners; ?>
 		</div>
