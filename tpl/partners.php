@@ -129,8 +129,8 @@ if ($wp_query->have_posts()) {
 	<!--SPONSOR GRID-->
 	<div class="container">
 		<div class="row g-5">
-			<?php echo $partners; ?>
 			<?= $the_content ?>
+			<?php echo $partners; ?>
 		</div>
 	</div>
 	<?= $carousel; ?>
