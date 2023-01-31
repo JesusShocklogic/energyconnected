@@ -12,7 +12,8 @@
 
 	<?php
 	$themeSettings = get_field('theme_settings', 'options');
-	$banner = get_field('banner_data'); ?>
+	$banner = get_field('banner_data');
+	$background_image = isset($banner['background_image']['url']) ? $banner['background_image']['url'] : null; ?>
 	<style>
 		.main-header {
 			background-image: url(<?= $banner['background_image']['url'] ?>);
@@ -66,15 +67,17 @@
 
 			<?= floating_icons_menu_desktop('top-menu'); ?>
 
-			<div class="main-header side-padding">
-				<div class="container-fluid text-white py-5">
-					<div class="row align-items-center" style="min-height: 400px">
-						<div class="col-lg-7 p-2 text-center text-lg-start">
-							<?php echo $banner['text'] ?>
+			<?php if ($background_image) : ?>
+				<div class="main-header side-padding">
+					<div class="container-fluid text-white py-5">
+						<div class="row align-items-center" style="min-height: 400px">
+							<div class="col-lg-7 p-2 text-center text-lg-start">
+								<?php echo $banner['text'] ?>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+			<?php endif; ?>
 		</div>
 	</header>
 

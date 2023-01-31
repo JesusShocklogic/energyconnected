@@ -95,7 +95,7 @@ get_header('front'); ?>
 	<div class="container-fluid">
 		<div class="row justify-content-center">
 			<!-- MAIN CONTENT -->
-			<div class="col-12 col-lg-8">
+			<div class="col-12">
 				<!-- CAROUSEL AD -->
 				<?php
 				//Building carousel
@@ -168,7 +168,7 @@ get_header('front'); ?>
 						?>
 					</div>
 				</div>
-				<?php most_read($limit = 5); ?>
+				<?php //most_read($limit = 5); ?>
 			</div>
 		</div>
 	</div>
