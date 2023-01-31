@@ -2,7 +2,17 @@
 get_header();
 $single_post_settings = get_field('single_post_settings', 'option');
 
-if (have_posts()) {
+if (have_posts()) { ?>
+	<style>
+		.article-top-image {
+			object-fit: contain !important;
+		}
+
+		.article-title {
+			color: #004259;
+		}
+	</style>
+	<?php
 	while (have_posts()) {
 		the_post(); ?>
 		<div class="container-fluid pb-5 ">
@@ -89,7 +99,7 @@ if (have_posts()) {
 					}
 					?>
 					<!-- Latest ARTICLES -->
-					<?php posts_latest(4) ?>
+					<?php posts_latest() ?>
 				</div>
 				<!-- SIDEBAR -->
 				<div class="col-12 col-lg-4 mt-3 mt-md-5 mt-lg-0">
@@ -97,25 +107,27 @@ if (have_posts()) {
 					<div class="row justify-content-center mb-2">
 						<div class="col-11 col-lg-12">
 							<?php
-							$image_url = $single_post_settings['add_1']['url'];
+							$image_url = isset($single_post_settings['add_1']['url']) ? $single_post_settings['add_1']['url'] : null;
 							$link = $single_post_settings['link_1'];
-							if ($link) {
 
-								$link_url = esc_url($link['url']);
-								$link_title = esc_html($link['title']);
-								$link_target = $link['target'] ? $link['target'] : '_self';
-								$link_target = esc_attr($link_target);
-								$item = <<<ITEM
-									<a href="$link_url" target="$link_target">
+							if ($image_url) {
+								if ($link) {
+									$link_url = esc_url($link['url']);
+									$link_title = esc_html($link['title']);
+									$link_target = $link['target'] ? $link['target'] : '_self';
+									$link_target = esc_attr($link_target);
+									$item = <<<ITEM
+										<a href="$link_url" target="$link_target">
+											<img src="$image_url" class="img-fluid topAd-img-size" alt="">
+										</a>
+									ITEM;
+								} else {
+									$item = <<<ITEM
 										<img src="$image_url" class="img-fluid topAd-img-size" alt="">
-									</a>
-								ITEM;
-							} else {
-								$item = <<<ITEM
-									<img src="$image_url" class="img-fluid topAd-img-size" alt="">
-								ITEM;
-							}
-							echo $item;
+									ITEM;
+								}
+								echo $item;
+							} //if image URL
 							?>
 						</div>
 					</div>
@@ -135,24 +147,26 @@ if (have_posts()) {
 					<div class="row justify-content-center mt-5">
 						<div class="col-11 col-lg-12">
 							<?php
-							$image_url = $single_post_settings['add_2']['url'];
+							$image_url = isset($single_post_settings['add_2']['url']) ? $single_post_settings['add_2']['url'] : null;;
 							$link = $single_post_settings['link_2'];
-							if ($link) {
-								$link_url = esc_url($link['url']);
-								$link_title = esc_html($link['title']);
-								$link_target = $link['target'] ? $link['target'] : '_self';
-								$link_target = esc_attr($link_target);
-								$item = <<<ITEM
-									<a href="$link_url" target="$link_target">
+							if ($image_url) {
+								if ($link) {
+									$link_url = esc_url($link['url']);
+									$link_title = esc_html($link['title']);
+									$link_target = $link['target'] ? $link['target'] : '_self';
+									$link_target = esc_attr($link_target);
+									$item = <<<ITEM
+										<a href="$link_url" target="$link_target">
+											<img src="$image_url" class="ad-img-size" alt="">
+										</a>
+									ITEM;
+								} else {
+									$item = <<<ITEM
 										<img src="$image_url" class="ad-img-size" alt="">
-									</a>
-								ITEM;
-							} else {
-								$item = <<<ITEM
-									<img src="$image_url" class="ad-img-size" alt="">
-								ITEM;
-							}
-							echo $item;
+									ITEM;
+								}
+								echo $item;
+							} // if image URL
 							?>
 
 						</div>
@@ -160,24 +174,26 @@ if (have_posts()) {
 					<div class="row justify-content-center mt-5">
 						<div class="col-11 col-lg-12">
 							<?php
-							$image_url = $single_post_settings['add_3']['url'];
+							$image_url = isset($single_post_settings['add_3']['url']) ? $single_post_settings['add_3']['url'] : null;
 							$link = $single_post_settings['link_3'];
-							if ($link) {
-								$link_url = esc_url($link['url']);
-								$link_title = esc_html($link['title']);
-								$link_target = $link['target'] ? $link['target'] : '_self';
-								$link_target = esc_attr($link_target);
-								$item = <<<ITEM
-									<a href="$link_url" target="$link_target">
+							if ($image_url) {
+								if ($link) {
+									$link_url = esc_url($link['url']);
+									$link_title = esc_html($link['title']);
+									$link_target = $link['target'] ? $link['target'] : '_self';
+									$link_target = esc_attr($link_target);
+									$item = <<<ITEM
+										<a href="$link_url" target="$link_target">
+											<img src="$image_url" class="ad-img-size" alt="">
+										</a>
+									ITEM;
+								} else {
+									$item = <<<ITEM
 										<img src="$image_url" class="ad-img-size" alt="">
-									</a>
-								ITEM;
-							} else {
-								$item = <<<ITEM
-									<img src="$image_url" class="ad-img-size" alt="">
-								ITEM;
-							}
-							echo $item;
+									ITEM;
+								}
+								echo $item;
+							} //if image url
 							?>
 						</div>
 					</div>
