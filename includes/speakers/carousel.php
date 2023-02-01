@@ -56,6 +56,9 @@ function speakers_carousel($speakersSettings)
             padding: 0;
             z-index: 1;
         }
+        .fw-bolder{
+            color:#004259;
+        }
     </style>
     <div class="side-padding mt-5">
         <div class="container-fluid">
@@ -150,9 +153,9 @@ function speakers_carousel($speakersSettings)
                             </div>
                         </div>
                         <div class="text-center">
-                            <strong><?= ($name ?? '') ?></strong>
+                            <strong class="fw-bolder"><?= ($name ?? '') ?></strong>
                             <div><?= ($jobTitle ?? '') ?></div>
-                            <div><?= ($organization ?? '') ?></div>
+                            <div class="fw-bolder"><?= ($organization ?? '') ?></div>
                         </div>
                         <div class="modal_dialog_content_body_right">
                             <div class="modal_dialog_content_body_right_content">
