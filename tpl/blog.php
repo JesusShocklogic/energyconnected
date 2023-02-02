@@ -64,7 +64,7 @@ get_header();
 
 
                     <div class="blog_wrapper_single">
-                        <div class="blog_wrapper_single_image">
+                        <div class="blog_wrapper_single_image pb-4">
                             <a href="<?= get_permalink() ?>">
                                 <img src="<?= get_the_post_thumbnail_url() ?>" alt="">
                             </a>
