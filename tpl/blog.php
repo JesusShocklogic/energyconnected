@@ -25,6 +25,10 @@ get_header();
         text-decoration: none;
     }
 
+    .blog_wrapper_single_title a {
+        color: #004259;
+    }
+
     .blog_wrapper_single_image {
         width: 100%;
         height: 300px;

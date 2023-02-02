@@ -1,6 +1,6 @@
 <?php
 
-function posts_latest($amount = 3)
+function posts_latest($amount = 4)
 {
 ?>
     <style>
