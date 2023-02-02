@@ -18,7 +18,7 @@ if (have_posts()) { ?>
 		<div class="container-fluid pb-5 ">
 			<div class="row side-padding">
 				<!-- MAIN CONTENT -->
-				<div class="col-12 col-lg-8 pe-lg-5">
+				<div class="col-12 col-lg-12 pe-lg-5">
 					<!-- ARTICLE -->
 					<div class="row justify-content-center">
 						<div class="col-11 col-lg-12">
@@ -63,74 +63,48 @@ if (have_posts()) { ?>
 							</div>
 						</div>
 					</div>
-					<!-- CAROUSEL AD -->
-					<?php
-					$carouselArray = $single_post_settings['carousel'];
-					if ($carouselArray) {
-						$carousel = "";
-						$carousel .= <<<ITEM
-						<div class="row justify-content-center mt-5">
-							<div class="col-11 col-xl-12">
-								<div id="articlesPageAd" class="carousel slide" data-bs-ride="carousel">
-									<div class="carousel-inner">
-						ITEM;
-						foreach ($carouselArray as $key => $item) {
-							$image = $item['image']['url'];
-							$link_url = esc_url($item['link']['url']);
-							$link_target = $item['link']['target'] ? $item['link']['target'] : '_self';
-							$link_target = esc_attr($link_target);
-							$active = ($key == 0) ? 'active' : '';
-							$carousel .= <<<ITEM
-										<div class="carousel-item $active">
-											<a href="$link_url" target="$link_target">
-												<img src="$image" class="d-block w-100 carousel-height" alt="...">
-											</a>
-										</div>
-							ITEM;
-						}
-						$carousel .= <<<ITEM
-									</div>
+
+					<div class="row">
+						<div class="col-12 col-lg-8">
+							<!-- Latest ARTICLES -->
+							<?php posts_latest() ?>
+						</div>
+
+						<div class="col-12 col-lg-4" style="padding-top: 6rem;">
+							<div class="row justify-content-center mb-2">
+								<div class="col-11 col-lg-12">
+									<?php
+									$image_url = isset($single_post_settings['add_1']['url']) ? $single_post_settings['add_1']['url'] : null;
+									$link = $single_post_settings['link_1'];
+
+									if ($image_url) {
+										if ($link) {
+											$link_url = esc_url($link['url']);
+											$link_title = esc_html($link['title']);
+											$link_target = $link['target'] ? $link['target'] : '_self';
+											$link_target = esc_attr($link_target);
+											$item = <<<ITEM
+												<a href="$link_url" target="$link_target">
+													<img src="$image_url" class="img-fluid topAd-img-size" alt="">
+												</a>
+											ITEM;
+										} else {
+											$item = <<<ITEM
+												<img src="$image_url" class="img-fluid topAd-img-size" alt="">
+											ITEM;
+										}
+										echo $item;
+									} //if image URL
+									?>
 								</div>
 							</div>
 						</div>
-						ITEM;
+					</div>
 
-						echo $carousel;
-					}
-					?>
-					<!-- Latest ARTICLES -->
-					<?php posts_latest() ?>
+					<!-- TOP AD IMAGE -->
 				</div>
 				<!-- SIDEBAR -->
-				<div class="col-12 col-lg-4 mt-3 mt-md-5 mt-lg-0">
-					<!-- TOP AD IMAGE -->
-					<div class="row justify-content-center mb-2">
-						<div class="col-11 col-lg-12">
-							<?php
-							$image_url = isset($single_post_settings['add_1']['url']) ? $single_post_settings['add_1']['url'] : null;
-							$link = $single_post_settings['link_1'];
-
-							if ($image_url) {
-								if ($link) {
-									$link_url = esc_url($link['url']);
-									$link_title = esc_html($link['title']);
-									$link_target = $link['target'] ? $link['target'] : '_self';
-									$link_target = esc_attr($link_target);
-									$item = <<<ITEM
-										<a href="$link_url" target="$link_target">
-											<img src="$image_url" class="img-fluid topAd-img-size" alt="">
-										</a>
-									ITEM;
-								} else {
-									$item = <<<ITEM
-										<img src="$image_url" class="img-fluid topAd-img-size" alt="">
-									ITEM;
-								}
-								echo $item;
-							} //if image URL
-							?>
-						</div>
-					</div>
+				<div class="d-none col-12 col-lg-4 mt-3 mt-md-5 mt-lg-0">
 					<!-- MOST READ ARTICLES -->
 					<div class="row justify-content-center mt-5">
 						<div class="col-11 col-xl-12">
