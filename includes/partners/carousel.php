@@ -15,7 +15,7 @@ function partner_carousel_wiper_start()
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
                 },
-                slidesPerView: 2,
+                slidesPerView: 1,
                 spaceBetween: 0,
                 breakpoints: {
                     1400: {
@@ -26,6 +26,9 @@ function partner_carousel_wiper_start()
                     },
                     992: {
                         slidesPerView: 3
+                    },
+                    320: {
+                        slidesPerView: 2
                     }
                 }
             });
@@ -120,8 +123,8 @@ function partners_carousel($partners_carousel)
                         </div>
 
                         <!-- If we need navigation buttons -->
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev d-none d-lg-block"></div>
+                        <div class="swiper-button-next d-none d-lg-block"></div>
                     </div>
                 </div>
             </div>
