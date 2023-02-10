@@ -23,6 +23,9 @@ function speaker_carousel_wiper_start()
                     },
                     992: {
                         slidesPerView: 3
+                    },
+                    320: {
+                        slidesPerView: 2
                     }
                 }
             });
@@ -112,8 +115,8 @@ function speakers_carousel($speakersSettings)
                         </div>
 
                         <!-- If we need navigation buttons -->
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev d-none d-lg-block"></div>
+                        <div class="swiper-button-next d-none d-lg-block"></div>
                     </div>
                 </div>
             </div>
