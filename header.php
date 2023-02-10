@@ -20,9 +20,29 @@
 			background-position: center left;
 		}
 
+		.bg-header {
+			background-color: #004259 !important;
+		}
+
+		.mh-header {
+			min-height: 400px;
+		}
+
 		@media (min-width: 1200px) {
 			.main-header {
 				background-position: <?= $banner['background_position'] ?> right;
+			}
+		}
+
+		@media (max-width: 850px) {
+			.main-header {
+				background-position: center;
+				background-size: cover;
+				aspect-ratio: 16 / 9;
+			}
+
+			.mh-header {
+				min-height: auto;
 			}
 		}
 	</style>
@@ -30,7 +50,7 @@
 	<header class="mb-5">
 		<div class="w-100 h-100" style="background-color: rgba(0, 0, 0, 0.3)">
 			<div class="menu-shadow"></div>
-			<nav class="navbar navbar-expand-xl navbar-dark py-1 mx-md-4 mx-lg-3 mx-xl-5 pt-xl-4">
+			<nav class="navbar navbar-expand-xl navbar-dark py-md-1 py-2 mx-md-4 mx-lg-3 mx-xl-5 pt-xl-4 bg-header">
 				<div class="container-fluid">
 					<!-- HAMBURGER MENU ICON -->
 					<button class="navbar-toggler border-0 p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" aria-expanded="false" aria-label="Toggle navigation">
@@ -70,7 +90,7 @@
 			<?php if ($background_image) : ?>
 				<div class="main-header side-padding">
 					<div class="container-fluid text-white py-5">
-						<div class="row align-items-center" style="min-height: 400px">
+						<div class="row align-items-center mh-header">
 							<div class="col-lg-7 p-2 text-center text-lg-start">
 								<?php echo $banner['text'] ?>
 							</div>

@@ -8,7 +8,7 @@ Description:
 Requires at least: 5.3
 Tested up to: 5.7
 Requires PHP: 7.3.0
-Version: 3
+Version: 2
 License:
 License URI:
 Text Domain: shocklogic.com
@@ -396,13 +396,19 @@ body {
     line-height: 2 !important;
 }
 
+@media (max-width: 576px) {
+    .main-header {
+        min-height: auto;
+    }
+}
+
 @media (min-width: 576px) {
+    body {
+        line-height: 1.5 !important;
+    }
 }
 
 @media (min-width: 768px) {
-    body {
-    line-height: 1.5 !important;
-}
     .carousel-height {
         height: 170px;
     }
