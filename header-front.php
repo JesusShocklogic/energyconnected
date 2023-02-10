@@ -21,6 +21,10 @@
             width: 100% !important;
         }
 
+        .bg-header {
+            background-color: #004259 !important;
+        }
+
         /* Bootstrap Media Query */
 
         /* Small devices (landscape phones, 576px and up) */
@@ -59,11 +63,19 @@
             }
 
         }
+
+        @media (max-width: 850px) {
+            .main-header {
+                background-position: center;
+                background-size: cover;
+                aspect-ratio: 11 / 9;
+            }
+        }
     </style>
     <header class="main-header mb-5">
         <div class="w-100 h-100" style="background-color: rgba(0, 0, 0, 0.3)">
             <div class="menu-shadow"></div>
-            <nav class="navbar navbar-expand-xl navbar-dark py-1 mx-md-4 mx-lg-3 mx-xl-5 pt-xl-4">
+            <nav class="navbar navbar-expand-xl navbar-dark py-md-1 py-2 mx-md-4 mx-lg-3 mx-xl-5 pt-xl-4 bg-header">
                 <div class="container-fluid">
                     <!-- HAMBURGER MENU ICON -->
                     <button class="navbar-toggler border-0 p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" aria-expanded="false" aria-label="Toggle navigation">

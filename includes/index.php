@@ -38,7 +38,5 @@ include("posts/cat-university.php");
 include("posts/latest.php");
 include("posts/sidebar.php");
 include("speakers/carousel.php");
-include("universities/features.php");
-include("universities/carousel.php");
 include("most-read/most-read.php");
 include("collapse-data/collapse-data.php");
