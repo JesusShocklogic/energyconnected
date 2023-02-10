@@ -56,19 +56,19 @@ get_header('front'); ?>
 	<div class="container-fluid mt-5">
 		<div class="row justify-content-center gx-xl-5">
 			<!-- IMAGE 1 -->
-			<div class="col-11 col-lg-4 mb-4 mb-lg-0 text-center">
+			<div class="col-11 col-lg-4 mb-0 text-center">
 				<a href="<?php echo get_field("date_image_1_url")["url"]; ?>">
 					<img class="date-img-size" src="<?php echo get_field("date_image_1")["url"]; ?>">
 				</a>
 			</div>
 			<!-- IMAGE 2 -->
-			<div class="col-11 col-lg-4 mb-4 mb-lg-0 text-center">
+			<div class="col-11 col-lg-4 mb-0 text-center">
 				<a href="<?php echo get_field("date_image_2_url")["url"]; ?>">
 					<img class="date-img-size" src="<?php echo get_field("date_image_2")["url"]; ?>">
 				</a>
 			</div>
 			<!-- IMAGE 3 -->
-			<div class="col-11 col-lg-4 mb-4 mb-lg-0 text-center">
+			<div class="col-11 col-lg-4 mb-0 text-center">
 				<a href="<?php echo get_field("date_image_3_url")["url"]; ?>">
 					<img class="date-img-size" src="<?php echo get_field("date_image_3")["url"]; ?>">
 				</a>
