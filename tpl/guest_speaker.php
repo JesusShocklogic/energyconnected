@@ -95,7 +95,7 @@ function getDayProgrammeTab($dayValue)
 									<img src="<?= get_template_directory_uri() ?>/images/btn-close-orange.svg" loading=lazy type="button" data-bs-dismiss="modal" aria-label="Close" />
 								</div>
 								<div class="d-flex flex-lg-row flex-column">
-									<div class="d-flex p-4 justify-content-center align-self-lg-center">
+									<div class="d-flex p-4 pt-lg-0 justify-content-center align-self-lg-start">
 										<div class="modal-image ratio ratio-1x1 m-auto">
 											<img src="<?= $image ?>" class="speacker-avatar" loading=lazy style="object-fit: cover;" />
 										</div>
