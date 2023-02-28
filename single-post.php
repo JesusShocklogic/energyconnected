@@ -65,16 +65,18 @@ if (have_posts()) { ?>
 					</div>
 
 					<div class="row">
-						<div class="col-12 col-lg-8">
+						<?php
+						$image_url = isset($single_post_settings['add_1']['url']) ? $single_post_settings['add_1']['url'] : null;
+						?>
+						<div class="col-12 <?= ($image_url) ? "col-lg-8" : "";  ?> ">
 							<!-- Latest ARTICLES -->
 							<?php posts_latest() ?>
 						</div>
 
-						<div class="col-12 col-lg-4" style="padding-top: 6rem;">
+						<div class="col-12 <?= ($image_url) ? "col-lg-4" : "d-none";  ?>" style="padding-top: 6rem;">
 							<div class="row justify-content-center mb-2">
 								<div class="col-11 col-lg-12">
 									<?php
-									$image_url = isset($single_post_settings['add_1']['url']) ? $single_post_settings['add_1']['url'] : null;
 									$link = $single_post_settings['link_1'];
 
 									if ($image_url) {
