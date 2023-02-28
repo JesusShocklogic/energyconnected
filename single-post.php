@@ -79,24 +79,18 @@ if (have_posts()) { ?>
 									<?php
 									$link = $single_post_settings['link_1'];
 
-									if ($image_url) {
-										if ($link) {
-											$link_url = esc_url($link['url']);
-											$link_title = esc_html($link['title']);
-											$link_target = $link['target'] ? $link['target'] : '_self';
-											$link_target = esc_attr($link_target);
-											$item = <<<ITEM
-												<a href="$link_url" target="$link_target">
+									if ($link) {
+										$item = <<<ITEM
+												<a href="$link" >
 													<img src="$image_url" class="img-fluid topAd-img-size" alt="">
 												</a>
 											ITEM;
-										} else {
-											$item = <<<ITEM
+									} else {
+										$item = <<<ITEM
 												<img src="$image_url" class="img-fluid topAd-img-size" alt="">
 											ITEM;
-										}
-										echo $item;
-									} //if image URL
+									}
+									echo $item;
 									?>
 								</div>
 							</div>
