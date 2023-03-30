@@ -8,7 +8,7 @@ $data = get_field('data');
 //the_content();
 $the_content = get_the_content();
 $args = array(
-	//'posts_per_page'   => -1, // Negative numbers means ALL. Cero means ALL too, but some errors have been detected.
+	'posts_per_page'   => -1, // Negative numbers means ALL. Cero means ALL too, but some errors have been detected.
 	'post_type'         => 'partners', //it does accept Custom Types
 	'offset'			=> 0,
 	'post_status'      => 'publish',
